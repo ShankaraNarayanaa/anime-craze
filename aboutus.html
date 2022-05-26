@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<title>anime craze</title>
+<meta charset="utf-8"/>
+<script>
+function validation(){
+  var email = document.getElementById('email').value;
+  var text = document.getElementById('text').value;
+  if(email==' '|| text=='')
+  {
+    alert("All Fields must be filled");
+    return false;
+  }
+  else if(email.length<15 || email.length>100){
+    alert('email must contain 15-100 characters');
+    return false;
+  }
+  else if(comment.length>30){
+    alert("comments should be upto 50 characters");
+    return false;
+  }
+  else
+  {
+  return true; 
+  }
+}
+</script>
+<style type="text/css">
+body
+{
+background-color:black;
+}
+nav
+{
+background-image: url(sideimage.jpg);
+background-position:right bottom;
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-size:170px 500px;
+}
+.ad
+{
+background-image: url(sideimage.jpg);
+background-position:left bottom;
+background-attachment:fixed;
+background-repeat:no-repeat;
+background-size:170px 500px;
+}
+h1
+{
+font-size:36pt;
+text-align:center;
+color:orange;
+text-shadow:20px -10px 1px red;
+font-family:Forte;
+}
+p
+{
+margin-left:200px;
+margin-right:200px;
+color:red;
+font-size:25px
+}
+.clr{color:orange;font-size:35px;}
+.form
+{
+color:black;
+font-size:15px;
+padding:3px; 
+border-color:orange;
+border-width:4px;
+border-style:solid;
+}
+.eform
+{
+border-color:orange;
+border-width:4px;
+border-style:solid;
+border-radius:24px;
+margin-right:300px;
+margin-left:300px;
+text-align:left;
+background-image:url("premium.jpg");
+}
+</style>
+<body>
+<h1><img src="images.jfif" height="45" width="60"/>
+Anime Craze</h1>
+<hr color="orange">
+<nav><nav class="ad">
+<p>
+<u class="clr">Admin:Vishnu G</u><br><br>
+<u class="clr">About the site:</u><br><br>
+AnimeCraze is a streaming service that allows our members to watch a wide variety of award-winning anime. 
+With AnimeCraze, you can enjoy unlimited ad-free viewing of our content. There's always something new to discover, and more anime 
+and movies are added every month.
+AnimeCraze was created to help people to watch thier favourite anime anywhere they want.it provides a list of many famous anime.
+The more you watch and the more you subscribe you will get a more variety of anime all around the world.We hope that animecraze
+will  provide you with better user interface and we are trying our best to provide it.this is a devoloping site with a few number 
+of servers.The more you recommend this site the better this site will become.it currently consists of two servers.we are uploading 
+as much anime we are hoping for all anime loving people to like this app.You can play, pause, and resume watching without ads or 
+commitments. Plus, you can download your favorite shows to your iOS or Android mobile device, or Windows 10 app.
+You can download anime from this site and various other features are present in this site.<br><br>
+<u class="clr">Premium account:</u><br><br>
+The premium account provides you with an ad-free facility.you can download videos using the premium account.several latest release
+anime can be viewed using the premium account.
+Our Premium Plan lets you stream anime and movies from animecraze on four devices at the same time and in high definition (HD) and
+ultra high definition (UHD) when available. This plan also lets you download titles to four phones or tablet.<br><br>     
+<u class="clr">Register usage:</u><br><br>
+we recommend our users to kindly register an account in our site.This helps us to track your interest of anime and help to 
+provide you with a better kind of anime to watch.It also helps us to rate the anime based on our users feedback.We can notify
+you whenever a new anime is released.Registration will be free.We can also get a count of number of users using our site.  
+</p>
+<p class="clr"><u>Feedback:</u></p>
+<form class="eform" action="feedback.php" method="POST" onsubmit="return validation()">
+<p>
+<label for="email">Email:</label>
+<input type="email" name="email" id="email"  size="34" class="form" placeholder="eg:keanureeves@gmail.com"><br><br>
+Rating:
+<select id="rating" name="rating" class="form">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select><br><br>
+comments:
+<input type="text" id="text" name="text" size="34" class="form" placeholder="very good"><br><br>
+<input type="reset" value="Reset">&nbsp;&nbsp;&nbsp;
+<input type="submit" value="submit">
+</p>
+</form>
+<br><br><br><br>
+</nav></nav>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<title>anime craze</title>
+<meta charset="utf-8"/>
+<script>
+function validation(){
+  var name = document.getElementById('name').value;
+  var password = document.getElementById('password').value;
+  if(name==' '|| password=='')
+  {
+    alert("All Fields must be filled");
+    return false;
+  }
+  else if(name.length<6 || name.length>15){
+    alert('Username must contain 6-15 characters');
+    return false;
+  }
+  else if(password.length<8 || password.length>15){
+    alert("Password must contain 8-15 characters");
+    return false;
+  }
+}
+</script>
+<style type="text/css">
+body
+{
+background-color:black;
+}
+h1
+{
+font-size:36pt;
+text-align:center;
+color:orange;
+text-shadow:20px -10px 1px red;
+font-family:Forte;
+}
+h2
+{
+font-size:32pt;
+text-align:center;
+color:purple;
+font-family:consolas;
+}
+form
+{
+padding:3px; 
+border-color:purple;
+border-width:6px;
+border-style:solid;
+border-radius:12px;
+margin-right:250px;
+margin-left:250px;
+margin-top:30px;
+background-image:url("login.jpg");
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.box
+{
+padding:3px; 
+border-color:purple;
+border-width:2px;
+border-style:solid;
+height:30px;
+width:240px;
+}
+a,u{text-decoration:none;}
+.login
+{
+padding:3px;
+border-color:black;
+border-radius:5px;
+color:purple;
+font-family:Cooper;
+background-color:black;
+height:30px;
+width:80px;
+font-size:16px;
+}
+.login:hover
+{
+padding:3px;
+border-color:purple;
+border-radius:5px;
+color:black;
+font-family:Cooper;
+background-color:purple;
+height:30px;
+width:80px;
+font-size:16px;
+}
+</style>
+<body>
+<h1><img src="images.jfif" height="45" width="60"/>
+Anime Craze</h1>
+<hr color="orange">
+<form action="login_user.php" method="POST" onsubmit="return validation()">
+<h2><u>Sign in</u></h2>
+<h2>
+Username:<input type="text" name="name" id="name" placeholder="Enter your username" class="box"><br><br>
+Password:<input type="password" name="password" id="password" placeholder="Enter your password" class="box"><br><br>
+<input type="submit" name="login" value="sign in" class="login"><br>
+<a href="homepage.php" class="login">sign in later</a>
+</h2>
+</form>
+</body>
+</html>

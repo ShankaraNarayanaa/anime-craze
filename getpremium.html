@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<title>anime craze</title>
+<meta charset="utf-8"/>
+<script>
+function validation(){
+  var name = document.getElementById('name').value;
+  var password = document.getElementById('password').value;
+  var email = document.getElementById('email').value;
+  var cardno = document.getElementById('cardno').value;
+  var pincode = document.getElementById('pincode').value;
+  var cvv = document.getElementById('cvv').value;
+  if(name==''||password==''||email==''||cardno==''||pincode==''||cvv=='')
+  {
+    alert("All Fields must be filled");
+    return false;
+  }
+  else if(name.length<6 || name.length>15){
+    alert('Username must contain 6-15 characters');
+    return false;
+  }
+  else if(password.length<8 || password.length>15){
+    alert("Password must contain 8-15 characters");
+    return false;
+  }
+  else if(cardno.length<16 || password.length>20){
+    alert("card number should contain 16 characters");
+  }
+  else if(pincode.length<3 ||pincode.length>7){
+    alert("incorrect pincode");
+  }
+  else if(cvv.length != 3){ 
+    alert("incorrect cvv");
+  }
+  else{
+    return true;
+  }
+}
+</script>
+<style type="text/css">
+body
+{
+background-color:black;
+}
+h1
+{
+font-size:36pt;
+text-align:center;
+color:orange;
+text-shadow:20px -10px 1px red;
+font-family:Forte;
+}
+form
+{
+padding:3px; 
+border-color:orange;
+border-width:6px;
+border-style:solid;
+border-radius:12px;
+margin-right:250px;
+margin-left:250px;
+margin-top:30px;
+background-image:url("premium.jpg");
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.login
+{
+padding:3px;
+border-color:black;
+border-radius:5px;
+color:orange;
+font-family:Cooper;
+background-color:black;
+height:30px;
+width:150px;
+font-size:16px;
+}
+.login:hover
+{
+padding:3px;
+border-color:purple;
+border-radius:5px;
+color:black;
+font-family:Cooper;
+background-color:orange;
+height:30px;
+width:150px;
+font-size:16px;
+}
+h2
+{
+font-size:32pt;
+text-align:center;
+color:orange;
+font-family:consolas;
+}
+.box
+{
+padding:3px; 
+border-color:orange;
+border-width:2px;
+border-style:solid;
+height:30px;
+width:240px;
+}
+</style>
+<body>
+<h1><img src="images.jfif" height="45" width="60"/>
+Anime Craze</h1>
+<hr color="orange">
+<form action="reg_saver.php" method="post" onsubmit="return validation()">
+<h2><u>Premium</u></h2>
+<h2>
+Username:<input type="text" name="name" id="name" placeholder="Enter your username" class="box"><br><br>
+Password:<input type="password" name="password" id="password" placeholder="Enter your password" class="box"><br><br>
+E-mail : <input type="email" name="email" id="email" placeholder="for verification" class="box"><br><br>
+card-no: <input type="text" name="cardno" id="cardno" placeholder="xxxx-xxxx-xxxx-xxxx" class="box"><br><br>
+Pincode: <input type="password" name="pincode" id="pincode" placeholder="xxxx" class="box"><br><br>
+CVV&nbsp;&nbsp;&nbsp;&nbsp;: <input type="password" name="cvv" id="cvv" placeholder="xxx" class="box"><br><br>
+<input type="submit" name="login" value="pay" class="login">
+</h2>
+</form>
+</body>
+</html>
